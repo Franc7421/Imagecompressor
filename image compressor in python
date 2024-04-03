@@ -1,0 +1,13 @@
+import PIL
+
+from tkinter.filedialog import*
+
+from PIL import Image
+
+file=askopenfilenames()
+
+img=Image.open(file[0])
+
+rgb_img=img.convert('RGB')
+
+rgb_img.save("Output.jpg","JPEG",optimize=True,quality=10)
